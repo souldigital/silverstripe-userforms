@@ -135,6 +135,11 @@ class UserDefinedForm_EmailRecipient extends DataObject {
 		// To address cannot be unbound, so restrict to pre-defined lists
 		$validEmailToFields = $multiOptionFields;
 
+		// Add extensions for objects here
+		$this->extend("validEmailFromFields", $validEmailFromFields);
+		$this->extend("validEmailToFields", $validEmailToFields);
+		$this->extend("validSubjectFields", $validSubjectFields);
+
 		// Build fieldlist
 		$fields = FieldList::create(Tabset::create('Root')->addExtraClass('EmailRecipientForm'));
 
