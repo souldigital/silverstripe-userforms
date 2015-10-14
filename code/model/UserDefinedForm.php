@@ -570,6 +570,7 @@ EOS;
 				})(jQuery);
 JS
 , 'UserFormsConditional');
+			$this->extend("afterGenerateConditionalJavascript");
 		}
 	}
 
